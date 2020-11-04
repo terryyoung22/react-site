@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          View <code>-Your Browswers Console-</code> To see message from npm package.
+          <code>-Terry React Site-</code>
         </p>
         <a
           className="App-link"
