@@ -1,0 +1,7 @@
+To Run Locally:
+* npm install
+* yarn install
+* yarn start
+
+# execute
+docker run -dit --name react -p 3001:3000 localreact
