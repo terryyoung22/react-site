@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>-Terry React Site-</code>
+          <code>-Terry's React Site-</code>
         </p>
         <a
           className="App-link"
@@ -18,6 +18,13 @@ function App() {
           My Github!
         </a>
       </header>
+      <div className="App">
+      <body className="App-body">
+        <p>
+          <b><u>LINKS</u></b>
+        </p>
+      </body>
+      </div>
     </div>
   );
 }
