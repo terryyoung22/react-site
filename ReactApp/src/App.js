@@ -1,35 +1,27 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>Welcome To My Page!</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/terryyoung22"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Github!
-        </a>
-        <p>
-          <h1 align="left">Purpose</h1>
-          This is just a portfolio of small react apps functions I created.<br></br>
-          Always looking for new ideas so please let me know / suggest projects!
-        </p>
-        <p>
-          <h1 align="left">Fun Stuff!</h1>
-          Click one of the links below to be taken to the page to see the feature!:
-        </p>
+import Home from './components/Home';
+// import About from './components/About';
+// import Contact from './components/Contact';
+// import Error from './components/Error';
+import Navigation from './components/Navigation';
 
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (      
+       <Router>
+        <div>
+          <Navigation />
+            <Switch>
+             <Route path="/" component={Home} exact/>
+           </Switch>
+        </div> 
+      </Router>
+    );
+  }
 }
 
 export default App;
