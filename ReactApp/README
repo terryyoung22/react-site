@@ -9,3 +9,5 @@ docker run -dit --name react -p 3001:3000 localreact
 # Links:
 Bulma integration with React 
 [site](https://medium.com/@thexap/how-to-setup-bulma-css-framework-with-react-under-5-minutes-a3d8c2c33a87)
+Use svg images
+[site](https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/)
