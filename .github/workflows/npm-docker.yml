@@ -30,7 +30,7 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.githubDockerToken}}
-    - name: Build, tag, and push image to Amazon ECR
+    - name: Build, tag, and push image to Github
       env:
         GITHUB_REGISTRY: ${{ steps.prep.outputs.REGISTRY }}
         GIT_IMAGE: ${{ steps.prep.outputs.image }}

@@ -1,13 +1,13 @@
-FROM node:alpine
+FROM node:12
 
 WORKDIR /app
 
 # adding .bin to $PATH of container
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY . ./
+COPY package*.json ./
 RUN npm install
-# RUN yarn install
+COPY . ./
 
 
 # start app
