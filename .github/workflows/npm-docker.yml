@@ -30,8 +30,7 @@ jobs:
         GIT_IMAGE: ${{ steps.prep.outputs.image }}
         TAG: latest
       run: |
-        docker build -t ${{ github.repository }}:$TAG ReactApp/
-        echo ${{ secrets.githubDockerToken}} | docker login ghcr.io -u terryyoung22 --password-stdin && docker push terryyoung22/${{ github.repository }}:$TAG
+        docker build -t ghcr.io/terryyoung22/reactapp:latest ReactApp/ && echo ${{ secrets.githubDockerToken}} | docker login ghcr.io -u terryyoung22 --password-stdin && docker push ghcr.io/terryyoung22/reactapp:latest
 
 
 
