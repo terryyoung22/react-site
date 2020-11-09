@@ -36,8 +36,8 @@ jobs:
         GIT_IMAGE: ${{ steps.prep.outputs.image }}
         TAG: latest
       run: |
-        docker build -t $GITHUB_REGISTRY/${{ github.repository }}:$TAG .
-        docker push $GITHUB_REGISTRY/${{ github.repository }}:$TAG
+        docker build -t terryyoung22/${{ github.repository }}:$TAG ReactApp/Dockerfile
+        docker push terryyoung22/${{ github.repository }}:$TAG
 
 
 
