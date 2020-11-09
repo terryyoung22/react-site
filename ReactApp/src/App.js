@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import './App.css'; // eslint-disable-next-line
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
