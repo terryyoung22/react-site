@@ -7,16 +7,9 @@ const home = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>Welcome To My Page!</code>
+          <code>Welcome To My React App!</code><br></br>
+          <code> -- Deployed through Docker on EKS --</code>
         </p>
-        <a
-          className="App-link"
-          href="https://github.com/terryyoung22"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Github!
-        </a>
         <p>
           <h1 align="left">Purpose</h1>
           This is just a portfolio of small react apps functions I created.<br></br>
@@ -25,6 +18,7 @@ const home = () => {
         <p>
           <h1 align="left">Fun Stuff!</h1>
           Click one of the links below to be taken to the page to see the feature!:
+          <h1> ** 🚀 UNDER CONTRUCTION! 🚀 ** </h1>
         </p>
 
       </header>

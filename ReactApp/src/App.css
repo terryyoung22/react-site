@@ -13,11 +13,27 @@
   }
 }
 
+a:link{
+  color: rgba(206, 0, 171, 0.603);
+}
+a:visited{
+  color:rgba(212, 224, 247, 0.603);
+}
+
 .App-header {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-topline {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
