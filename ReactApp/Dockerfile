@@ -11,4 +11,4 @@ RUN npm install
 
 
 # start app
-CMD ["yarn", "start"]
+CMD ["npm", "start"]

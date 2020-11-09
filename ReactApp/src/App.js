@@ -1,27 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-import greeting from '@terryyoung22/npmcode';
+import React, { Component } from 'react';
+import './App.css'; // eslint-disable-next-line
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
-greeting();
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>-Terry React Site-</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/terryyoung22"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Github!
-        </a>
-      </header>
-    </div>
-  );
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import Navigation from './components/Navigation';
+
+class App extends Component {
+  render() {
+    return (      
+       <Router>
+        <div>
+          <Navigation />
+            <Switch>
+             <Route path="/" component={Home} exact/> |
+             <Route path="/about" component={About}/> |
+             <Route path="/contact" component={Contact}/> |
+            <Route component={Error}/>
+           </Switch>
+        </div> 
+      </Router>
+    );
+  }
 }
 
 export default App;

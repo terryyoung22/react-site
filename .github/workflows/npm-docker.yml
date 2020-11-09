@@ -7,17 +7,28 @@ on:
       branches: [ master, develop ]
   
 jobs:
-  build:
+  push_to_registry:
+    name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.githubDockerToken}}
+          registry: docker.pkg.github.com
+          repository: terryyoung22/react-site/reactapp
+          tag_with_ref: false
+
 
     ##############docker hub push##################
 
-    - name: Docker login
-      run: docker login -u ${{ secrets.DockerHubUser }} -p ${{ secrets.DockerHubToken }}
+    # - name: Docker login
+    #   run: docker login -u ${{ secrets.DockerHubUser }} -p ${{ secrets.DockerHubToken }}
 
-    - name: Docker build and push React app
-      run: docker build -f ${GITHUB_WORKSPACE}/ReactApp/Dockerfile -t ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest . && docker push ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest
-      env:
-        IMAGE_NAME: react
+    # - name: Docker build and push React app
+    #   run: docker build -f ${GITHUB_WORKSPACE}/ReactApp/Dockerfile -t ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest . && docker push ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest
+    #   env:
+    #     IMAGE_NAME: react
