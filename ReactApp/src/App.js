@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>-Terry's React Site-</code>
+          <code>Welcome To My Page!</code>
         </p>
         <a
           className="App-link"
@@ -17,14 +17,17 @@ function App() {
         >
           My Github!
         </a>
-      </header>
-      <div className="App">
-      <body className="App-body">
         <p>
-          <b><u>LINKS</u></b>
+          <h1 align="left">Purpose</h1>
+          This is just a portfolio of small react apps functions I created.<br></br>
+          Always looking for new ideas so please let me know / suggest projects!
         </p>
-      </body>
-      </div>
+        <p>
+          <h1 align="left">Fun Stuff!</h1>
+          Click one of the links below to be taken to the page to see the feature!:
+        </p>
+
+      </header>
     </div>
   );
 }
