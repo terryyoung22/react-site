@@ -30,15 +30,14 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.githubDockerToken}}
-    -
-      name: Build and push
-      id: docker_build
-      uses: docker/build-push-action@v2
-      with:
-        context: ReactApp
-        push: true
-        file: ./Dockerfile
-        tags: ${{ steps.prep.outputs.tags }}
+    - name: Build, tag, and push image to Amazon ECR
+      env:
+        GITHUB_REGISTRY: ${{ steps.prep.outputs.REGISTRY }}
+        GIT_IMAGE: ${{ steps.prep.outputs.image }}
+        TAG: latest
+      run: |
+        docker build -t $GITHUB_REGISTRY/${{ github.repository }}:$TAG .
+        docker push $GITHUB_REGISTRY/${{ github.repository }}:$TAG
 
 
 
