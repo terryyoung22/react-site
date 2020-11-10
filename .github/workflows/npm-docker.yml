@@ -30,8 +30,8 @@ jobs:
         GIT_IMAGE: ${{ steps.prep.outputs.image }}
         TAG: latest
       run: |
-        docker build -t ghcr.io/terryyoung22/react-site:latest ReactApp/ && echo ${{ secrets.githubDockerToken}} | docker login ghcr.io -u terryyoung22 --password-stdin && docker push ghcr.io/terryyoung22/react-site:latest
-
+        docker build -t docker.pkg.github.com/terryyoung22/react-site:latest ReactApp/ && echo ${{ secrets.githubDockerToken}} | docker login docker.pkg.github.com -u terryyoung22 --password-stdin && docker push docker.pkg.github.com/terryyoung22/react-site:latest
+# use this tag for when docker.pkg is deprecated: ghcr.io
 
 
     ##############docker hub push##################
