@@ -8,6 +8,7 @@ import About from './About';
 import Contact from './Contact';
 import Error from './Error';
 import history from './history';
+import wonderful from './wonderfuldev'
 
 export default class Routes extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class Routes extends Component {
              <Route path="/" exact component={Home} /> |
              <Route path="/About" component={About}/> |
              <Route path="/Contact" component={Contact}/> |
+             <Route path="/wonderfuldev" component={wonderful}/> |
              <Route component={Error}/>
            </Switch>
       </Router>
