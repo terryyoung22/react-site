@@ -2,9 +2,9 @@ name: NPM Docker Container Creation
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   pull_request:
-      branches: [ master ]
+      branches: [ develop ]
   
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         GIT_IMAGE: ${{ steps.prep.outputs.image }}
         TAG: latest
       run: |
-        docker build -t ghcr.io/terryyoung22/reactapp:latest ReactApp/ && echo ${{ secrets.githubDockerToken}} | docker login ghcr.io -u terryyoung22 --password-stdin && docker push ghcr.io/terryyoung22/reactapp:latest
+        docker build -t ghcr.io/terryyoung22/reactapp:latest ReactApp/
 # use this tag for when docker.pkg is deprecated: ghcr.io
 
 
