@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from "react";
 import logo from '../logo.svg';
+import history from './history';
+import { Button } from 'react-bootstrap';
 
-const home = () => {
+export default class Home extends Component {
+render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,10 +23,18 @@ const home = () => {
           Click one of the links below to be taken to the page to see the feature!:
           <h1> ** 🚀 UNDER CONTRUCTION! 🚀 ** </h1>
         </p>
+        <form>
+            <Button onClick={() => history.push('./About')}>Click test</Button><br></br>
+            <Button onClick={() => history.push('./About')}>Click another</Button>
+          </form>
 
       </header>
+      <body>
+
+      <div id="wonderful"></div>
+
+      </body>
     </div>
   );
 }
-
-export default home;
+}
