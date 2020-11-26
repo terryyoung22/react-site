@@ -25,3 +25,7 @@ const wonderful = () => {
 
  
 export default wonderful;
+
+// src: https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_handling 
+// src: https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms
+// src: https://www.w3schools.com/react/react_forms.asp
