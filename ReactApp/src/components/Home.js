@@ -25,7 +25,7 @@ render() {
         </p>
         <form>
             <Button onClick={() => history.push('./About')}>Click test</Button><br></br>
-            <Button onClick={() => history.push('./About')}>Click another</Button>
+            <Button onClick={() => history.push('./wonderful')}>Click another</Button>
           </form>
 
       </header>
