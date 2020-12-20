@@ -1,0 +1,45 @@
+name: NPM Docker Container Creation
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+      branches: [ develop ]
+  
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Preparation
+      id: prep
+      run: |
+        REGISTRY="ghcr.io"
+        IMAGE="${REGISTRY}/${{ github.repository }}/${{ github.event.repository.name }}"
+        TAGS="${IMAGE}:latest"
+        if [[ $GITHUB_REF == ref/head/master ]]; then
+          TAGS="${TAGS},${IMAGE}:latest"
+        fi
+        echo ::set-output name=tags::${TAGS}
+    # - name: Set up Docker Buildx
+    #   uses: docker/setup-buildx-action@v1
+    - name: Build, tag, and push image to Github
+      env:
+        GITHUB_REGISTRY: ${{ steps.prep.outputs.REGISTRY }}
+        GIT_IMAGE: ${{ steps.prep.outputs.image }}
+        TAG: latest
+      run: |
+        docker build -t ghcr.io/terryyoung22/reactapp:latest ReactApp/
+# use this tag for when docker.pkg is deprecated: ghcr.io
+
+
+    ##############docker hub push##################
+
+    # - name: Docker login
+    #   run: docker login -u ${{ secrets.DockerHubUser }} -p ${{ secrets.DockerHubToken }}
+
+    # - name: Docker build and push React app
+    #   run: docker build -f ${GITHUB_WORKSPACE}/ReactApp/Dockerfile -t ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest . && docker push ${{ secrets.DockerHubUser }}/${IMAGE_NAME}:latest
+    #   env:
+    #     IMAGE_NAME: react
