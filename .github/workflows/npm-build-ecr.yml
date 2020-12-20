@@ -38,7 +38,7 @@ jobs:
         ECR_REPOSITORY: terryapps
         IMAGE_TAG: react-site
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./ReactApp
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Logout of Amazon ECR
