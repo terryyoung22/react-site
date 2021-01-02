@@ -10,30 +10,24 @@ render() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <code>Welcome To My React App!</code><br></br>
-          <code> -- Deployed through Docker on EKS --</code>
+          <code>Terry's Portfolio Directory!</code><br></br>
+          <code> -- Deployed Through Docker on ECS --</code>
         </p>
         <p>
-          <h1 align="left">Purpose</h1>
-          This is just a portfolio of small react apps functions I created.<br></br>
-          Always looking for new ideas so please let me know / suggest projects!
-        </p>
-        <p>
-          <h1 align="left">Fun Stuff!</h1>
-          Click one of the links below to be taken to the page to see the feature!:
+          <h1 align="left"><u>Paths</u></h1>
+          <h3><a href="http://portfolio.typrojects.io">Visit my actual portfolio</a></h3>
+          <h3><a href="https://github.com/terryyoung22">My Github Page</a></h3>
+          <h3><a href="https://www.linkedin.com/in/terry-young/">Lets get Linked here!</a></h3>
           <h1> ** 🚀 UNDER CONTRUCTION! 🚀 ** </h1>
+          More links to come!
         </p>
-        <form>
+
+        {/* <form>
             <Button onClick={() => history.push('./About')}>Click test</Button><br></br>
             <Button onClick={() => history.push('./wonderful')}>Click another</Button>
-          </form>
+          </form> */}
 
       </header>
-      <body>
-
-      <div id="wonderful"></div>
-
-      </body>
     </div>
   );
 }
