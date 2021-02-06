@@ -1,1 +1,2 @@
-helm install reactpythonhelm --generate-name
+helm install portfolio portfolio
+

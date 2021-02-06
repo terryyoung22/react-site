@@ -26,9 +26,14 @@ render() {
         <p>
         <form>
         <h2><u>Details On Me</u></h2>
-        <a href="./About" onclick="window.history.go(-1); return false;"> About Me! </a>
-
+        <a href="./About" onclick="window.history.go(-1); return false;"> About Me! </a><br></br>
+        <a href="./Skills" onclick="window.history.go(-1); return false;"> How Skilled Am I? </a><br></br>
+        <a href="./Projects" onclick="window.history.go(-1); return false;"> Built Projects </a><br></br>
+        <a href="./Contact" onclick="window.history.go(-1); return false;"> Contact Me </a>
           </form>
+          </p>
+          <p>
+          🚀  MORE COMING SOON! ALWAYS UNDER CONTRUCTION! 🚀 <li>Built By Terry!</li>
           </p>
       </body>
     </div>
