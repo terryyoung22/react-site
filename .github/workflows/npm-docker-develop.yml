@@ -30,7 +30,7 @@ jobs:
         GIT_IMAGE: ${{ steps.prep.outputs.image }}
         TAG: latest
       run: |
-        docker build -t ghcr.io/terryyoung22/reactapp:latest ReactApp/
+        docker build -t ghcr.io/terryyoung22/portfolio:latest portfolio/
 # use this tag for when docker.pkg is deprecated: ghcr.io
 
 
